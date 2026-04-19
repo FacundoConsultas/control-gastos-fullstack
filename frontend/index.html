@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gestor de Gastos Profesionales | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>💰 Mis Gastos</h1>
+            <p>Control de finanzas personales</p>
+        </header>
+
+        <section class="form-section">
+            <div class="input-group">
+                <label for="nombre">Concepto</label>
+                <input type="text" id="nombre" placeholder="Ej: Alquiler, Supermercado...">
+            </div>
+
+            <div class="row">
+                <div class="input-group">
+                    <label for="precio">Precio unitario</label>
+                    <input type="number" id="precio" placeholder="0.00">
+                </div>
+                <div class="input-group">
+                    <label for="cantidad">Cantidad</label>
+                    <input type="number" id="cantidad" placeholder="1">
+                </div>
+            </div>
+
+            <button class="btn-primary" onclick="agregarGasto()">Añadir Gasto</button>
+        </section>
+
+        <section class="resume-section">
+            <div class="total-card">
+                <span>Total Acumulado:</span>
+                <h2 id="total-monto">$0</h2>
+            </div>
+        </section>
+
+        <section class="list-section">
+            <h3>Historial de Movimientos</h3>
+            <ul id="lista-gastos">
+                </ul>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
